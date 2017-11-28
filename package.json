@@ -4,7 +4,8 @@
   "description": "My 3rd node app of the course",
   "main": "app.js",
   "scripts": {
-    "test": "mochajs"
+    "test": "mochajs",
+    "start": "node server.js"
   },
   "keywords": [
     "node-web"

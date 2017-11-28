@@ -2,6 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 const app = express();
+const port = process.env.PORT || 3000;
 app.use(express.static(__dirname + '/public'));
 app.use((req, res, next)=>{
     var now = new Date().toString();
@@ -48,6 +49,6 @@ app.get('/bad', (req,res)=>{
     res.send(error);
 });
 app.set('view engine', 'hbs');
-app.listen(3000, ()=>{
-    console.log('Server is running with PORT 3000');
+app.listen(port, ()=>{
+    console.log(`Server is running with PORT ${port}`);
 });
